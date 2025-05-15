@@ -1,17 +1,5 @@
 # PRF_Experiment
-Repository for PRF mapping experiment stimulus
-
-Requirements: psychopy and exptools2
-
-**Usage**
-
-Create setting files named expsettings_*Task*.yml within the Experiment folder. Change *Task* to your actual task name. Run the following line from within the Experient folder.
-
-- python main.py sub-*xxx* ses-*x* task-*NameTask* run-*x*
-
-Subject SHOULD be specified according the the BIDS convention (sub-001, sub-002 and so on), Task MUST match one of the settings files in the Experiment folder, and Run SHOULD be an integer.
-
-
+Repository for PRF mapping experiment stimulus. 
 
 **Flickering vs standard pRF stimulus**
 
@@ -26,6 +14,15 @@ Both versions allow to change the stimulus size depending on a second monitor se
 This was done to accommodate for later experiments that include an MRI and MEG session that presents the stimulus at the same degrees of visual angle.
 This can be turned off by setting the Single monitor mode to True in the settings file.
 
+Requirements: psychopy and exptools2
+
+**Usage**
+
+Create setting files named expsettings_*Task*.yml within the Experiment folder. Change *Task* to your actual task name. Run the following line from within the Experient folder.
+
+- python main.py sub-*xxx* ses-*x* task-*NameTask* run-*x*
+
+Subject SHOULD be specified according the the BIDS convention (sub-001, sub-002 and so on), Task MUST match one of the settings files in the Experiment folder, and Run SHOULD be an integer.
 
 
 **Settings file**
@@ -38,3 +35,5 @@ The code adds a randomization of max. +1 or -1 to the color switch times, so e.g
 
 Different flicker frequencies can be implemented by creating a new settingsfile, changing the frequency parameter.
 Note: keep in mind that specifying a frequency of 10 Hz creates a stimulus that flips the checkerboard at 10Hz. The actual square wave is thus 5Hz.
+
+2021 kateic
